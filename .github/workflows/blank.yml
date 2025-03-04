@@ -1,17 +1,18 @@
-name: Read Hello.txt on Push
+name: Read Hello.txt
 
 on:
   push:
     branches:
-      - main
+      - main  # Ensure this is the correct branch
 
 jobs:
   read-file:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout Repository
+      - name: Checkout repository
         uses: actions/checkout@v3
 
-      - name: Read and Output hello.txt Content
+      - name: Read and Output hello.txt
         run: cat hello.txt
+
 
